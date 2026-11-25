@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10091d">
+  <title>ANIMAH — Share your moment</title>
+  <style>
+    :root{--bg:#0d0815;--panel:#191126;--purple:#9b5cff;--pink:#e35bff;--muted:#b8abc9;--white:#fff}
+    *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 50% -10%,#38205b 0,#10091d 42%,#09060e 100%);color:var(--white);font-family:Arial,Helvetica,sans-serif}
+    header{height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;border-bottom:1px solid #ffffff18;position:sticky;top:0;background:#10091ddd;backdrop-filter:blur(12px);z-index:2}
+    .brand{font-weight:900;letter-spacing:3px;font-size:22px;background:linear-gradient(90deg,#fff,#c89aff);-webkit-background-clip:text;color:transparent}
+    .tag{font-size:12px;color:var(--muted)} .wrap{max-width:1080px;margin:0 auto;padding:28px 18px 60px}
+    .hero{text-align:center;padding:34px 12px 28px}.hero h1{font-size:clamp(32px,7vw,58px);margin:0 0 12px;letter-spacing:-2px}.hero h1 span{color:#c18cff}
+    .hero p{color:var(--muted);line-height:1.6;margin:0 auto;max-width:560px}
+    .actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+    button{border:0;border-radius:999px;padding:12px 18px;font-weight:700;cursor:pointer}
+    .primary{background:linear-gradient(90deg,#8e4dff,#d14dff);color:white;box-shadow:0 8px 28px #9b5cff44}
+    .secondary{background:#ffffff12;color:#fff;border:1px solid #ffffff25}
+    .layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:22px;align-items:start}
+    .section-title{font-size:18px;margin:0 0 14px}.feed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .video{min-height:330px;border-radius:22px;overflow:hidden;position:relative;padding:18px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid #ffffff20;background:linear-gradient(155deg,#4a2475,#171020 65%)}
+    .video:nth-child(2){background:linear-gradient(155deg,#6c2a79,#171020 70%)}.video:nth-child(3){background:linear-gradient(155deg,#282b67,#171020 70%)}.video:nth-child(4){background:linear-gradient(155deg,#733c52,#171020 70%)}
+    .play{align-self:center;margin:auto;width:62px;height:62px;border-radius:50%;background:#ffffff20;display:grid;place-items:center;font-size:25px;border:1px solid #ffffff55}
+    .video small{color:#e4d5f4}.video strong{display:block;margin-top:6px}.video .likes{margin-top:12px;color:#f3dfff}
+    aside{background:#ffffff0b;border:1px solid #ffffff18;border-radius:20px;padding:18px}.aside-title{font-weight:800;margin-bottom:10px}
+    aside p{font-size:13px;color:var(--muted);line-height:1.6}.notice{background:#2b1c3c;border:1px solid #8c5cc455;padding:12px;border-radius:14px;color:#e6d7f5;font-size:12px;line-height:1.55;margin-top:14px}
+    footer{text-align:center;color:#8f819e;font-size:12px;padding:28px 12px}
+    @media(max-width:720px){.layout{grid-template-columns:1fr}.feed{grid-template-columns:1fr 1fr}.video{min-height:280px}}
+    @media(max-width:420px){.feed{grid-template-columns:1fr}.video{min-height:320px}}
+  </style>
+</head>
+<body>
+  <header><div class="brand">ANIMAH</div><div class="tag">CREATE • SHARE • CONNECT</div></header>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Your moment. <span>Your stage.</span></h1>
+      <p>Welcome to ANIMAH — a new place for creativity, short videos and positive connections. Discover the idea. Be part of the beginning.</p>
+      <div class="actions">
+        <button class="primary" onclick="alert('Welcome to ANIMAH! Video accounts and uploads are coming in the next build.')">Join the community</button>
+        <button class="secondary" onclick="document.getElementById('feed').scrollIntoView({behavior:'smooth'})">Explore videos</button>
+      </div>
+    </section>
+    <div class="layout">
+      <section>
+        <h2 class="section-title" id="feed">Discover</h2>
+        <div class="feed">
+          <article class="video"><small>FEATURED • 00:15</small><div class="play">▶</div><div><strong>Creativity starts here</strong><small>@animah • Welcome video</small><div class="likes">♡ 128 likes · Demo</div></div></article>
+          <article class="video"><small>TRENDING • 00:12</small><div class="play">▶</div><div><strong>Make every moment count</strong><small>@creatorone • Demo post</small><div class="likes">♡ 96 likes · Demo</div></div></article>
+          <article class="video"><small>FOR YOU • 00:18</small><div class="play">▶</div><div><strong>Show the world your talent</strong><small>@newstar • Demo post</small><div class="likes">♡ 74 likes · Demo</div></div></article>
+          <article class="video"><small>COMMUNITY • 00:10</small><div class="play">▶</div><div><strong>Good vibes only</strong><small>@goodvibes • Demo post</small><div class="likes">♡ 52 likes · Demo</div></div></article>
+        </div>
+      </section>
+      <aside>
+        <div class="aside-title">Welcome to ANIMAH 💜</div>
+        <p>This is your first website preview. The purple-and-black look, layout and sample feed are ready.</p>
+        <div class="notice"><b>Important:</b> This first version is a visual prototype. It does not yet create accounts, store videos, or send real likes and comments. We will add those safely in later steps.</div>
+        <p><b>Coming next</b><br>1. Real sign-up and login<br>2. Video uploads and playback<br>3. Likes, comments and profiles<br>4. Report and block tools</p>
+      </aside>
+    </div>
+  </main>
+  <footer>© 2026 ANIMAH • Built for creativity and community</footer>
+</body>
+</html>
